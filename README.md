@@ -1,6 +1,8 @@
 # Self-Supervised Learing for Few-Shot Bird Sound Classification
 Authors: Ilyass Moummad, Romain Serizel, Nicolas Farrugia
 ---
+Submitted to ICASSP SASB 2024, a more detailed read me will be updated upon acceptance
+---
 We train a feature extractor on the training split of BirdCLEF2020 using self-supervised learning and evaluate it on the validation/test splits following [MetaAudio](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark) Benchmark 
 
 ## Data Prepration
