@@ -13,10 +13,10 @@ For all the training/evaluation scripts, specify ```--datapath``` for the stored
 
 ## Training
 train_ps.py: train on the PANN selected segments using ```--loss``` loss function \
-train_tp.py: train on the whole training set using temporal proximity for sampling two views if ```--tprox``` otherwise it uses two random crops from each audio file \
+train_tp.py: train on the whole training set using temporal proximity for sampling two views if ```--tprox``` otherwise it uses two random crops from each audio file
 
 ## Evaluation
 eval_ps.py: evalute the model trained using ```--loss``` on the ```--split``` split on the segments selected using PANN \
-eval_tp.py: evalute the model trained using ```--loss``` on the ```--split``` split on each chunk of the file, predictions are aggregated using mean \
+eval_tp.py: evalute the model trained using ```--loss``` on the ```--split``` split on each chunk of the file, predictions are aggregated using mean
 
-args.py: contains all the arguments beside the one to be specified above, set to default values, as well as their description \
+args.py: contains all the arguments beside the one to be specified above, set to default values, as well as their description
