@@ -1,4 +1,4 @@
-# Self-Supervised Learing for Few-Shot Bird Sound Classification
+# Self-Supervised Learning for Few-Shot Bird Sound Classification
 Authors: Ilyass Moummad, Romain Serizel, Nicolas Farrugia
 ---
 ## Submitted to ICASSP SASB 2024, a more detailed README will be updated upon acceptance
