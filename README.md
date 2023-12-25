@@ -2,7 +2,6 @@
 Authors: Ilyass Moummad, Romain Serizel, Nicolas Farrugia
 ---
 We train a feature extractor on the training split of BirdCLEF2020 and evaluate it on the validation/test splits following [MetaAudio](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark) Benchmark 
----
 
 ## Data Prepration
 Put CNN14 PANN checkpoint "Cnn14_map=0.431.pth" in ```util/``` folder \
