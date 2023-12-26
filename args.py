@@ -17,7 +17,7 @@ parser.add_argument("--notpruned", action='store_true') #keep it False to use bi
 # Data Augmentation
 parser.add_argument("--mincoef", type=float, default=0.6) #minimum coef for spectrogram mixing
 parser.add_argument("--tprox", action='store_true') #use temporal proximity for two segments
-parser.add_argument("--deltat", type=int, default=10) #max seconds between two segments
+parser.add_argument("--deltat", type=int, default=2) #max seconds between two segments
 ## SpecAugment
 parser.add_argument("--fmask", type=int, default=10) #fmax
 parser.add_argument("--tmask", type=int, default=30) #fmax
