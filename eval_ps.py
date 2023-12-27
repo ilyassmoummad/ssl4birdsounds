@@ -125,7 +125,7 @@ def nearest_prototype(dataloader, encoder, transform, args):
 if __name__ == "__main__":
 
     # Val
-    eval_birdclef = BirdClef2020(datapath=args.datapath, split='val')
+    eval_birdclef = BirdClef2020(datapath=args.datapath, split='val', notpruned=args.notpruned)
     batch_sampler = NWayKShotBatchSampler(eval_birdclef, args.nway, args.kshot, args.nquery, 1)
     eval_loader = DataLoader(eval_birdclef, batch_sampler=batch_sampler)
 

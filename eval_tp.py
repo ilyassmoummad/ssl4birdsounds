@@ -14,6 +14,12 @@ import math
 import glob
 import os
 
+FILES_TO_PRUNE = []
+with open(r'util/files_to_prune.txt', 'r') as f:
+    for line in f:
+        x = line[:-1]
+        FILES_TO_PRUNE.append(x)
+
 SAMPLES = args.sr * args.duration
 
 class BirdClef2020Eval(Dataset):
@@ -52,6 +58,10 @@ class BirdClef2020Eval(Dataset):
         self.audiolabels = []
         self.label = []
         for audiofile in glob.glob(os.path.join(datapath, '*/*.'+self.extension)): 
+            audiofilename = audiofile.split('/')[-1]
+            if not args.notpruned:
+                if audiofilename.replace(self.extension,'pt') in FILES_TO_PRUNE:
+                    continue
             if audiofile.split('/')[-2].replace(" ","_").replace("'","") in self.split_classes:
                 self.audiofiles.append(audiofile)
                 cls_label = audiofile.split('/')[-2].replace(" ","_").replace("'","")
