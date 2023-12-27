@@ -3,6 +3,8 @@ Authors: Ilyass Moummad, Romain Serizel, Nicolas Farrugia
 ---
 ## Submitted to ICASSP SASB 2024, a more detailed README will be updated upon acceptance
 
+Preprint: https://arxiv.org/abs/2312.15824
+
 We train a feature extractor on the training split of BirdCLEF2020 using self-supervised learning and evaluate it on the validation/test splits following [MetaAudio](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark) Benchmark 
 
 ## Data Prepration
