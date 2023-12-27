@@ -24,3 +24,15 @@ Supported training losses : Barlow Twins ```bt```, SimCLR ```simclr```, FroSSL `
 ```eval_tp.py```: evalute the model trained using ```--loss``` on the ```--split``` split on each chunk of the file, predictions are aggregated using mean \
 
 ```args.py```: contains all the arguments beside the one to be specified above, set to default values, as well as their description
+
+## To cite this work:
+```
+@misc{moummad2023selfsupervised,
+      title={Self-Supervised Learning for Few-Shot Bird Sound Classification}, 
+      author={Ilyass Moummad and Romain Serizel and Nicolas Farrugia},
+      year={2023},
+      eprint={2312.15824},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
+```
