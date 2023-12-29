@@ -77,7 +77,7 @@ if __name__ == "__main__":
     # Prepare model
     encoder = mobilenetv3().to(args.device)
 
-    projector = Projector(model_name=args.model).to(args.device)
+    projector = Projector().to(args.device)
     print(summary(encoder))
 
     # Loss function and optimizer
