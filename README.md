@@ -8,7 +8,7 @@ Authors: Ilyass Moummad, Romain Serizel, Nicolas Farrugia
 We train a feature extractor on the training split of BirdCLEF2020 using self-supervised learning and evaluate it on the validation/test splits following [MetaAudio](https://github.com/CHeggan/MetaAudio-A-Few-Shot-Audio-Classification-Benchmark) Benchmark 
 
 To Download BirdCLEF 2020 data, go to [Aircrowd](https://www.aicrowd.com/clef_tasks/22/task_dataset_files?challenge_id=211) and make an account to be able to access LifeCLEF 2020 Bird Challenge ressources. \
-Go to Ressources and download the file that contains "Download Links" for Train (Train data from the challenge is split into new train/val/test sets for the few-shot benchmark, we refer to MetaAudio for more details.)
+Go to Ressources and download the file that contains "Download Links" for Train (Train data from the challenge is split into new train/val/test sets for the few-shot benchmark, we refer to MetaAudio for more details).
 
 ## Data Prepration
 Put CNN14 PANN checkpoint "Cnn14_map=0.431.pth" in ```util/``` folder \
