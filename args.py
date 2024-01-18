@@ -33,7 +33,7 @@ parser.add_argument("--fmin", type=int, default=50) #fmin
 
 # Loss
 parser.add_argument("--loss", type=str, default='bt') #loss to use for training ['fro', 'simclr', 'bt', 'supcon']
-parser.add_argument("--tau", type=float, default=0.06) #temperature for cosine sim
+parser.add_argument("--tau", type=float, default=1.0) #temperature for cosine sim
 parser.add_argument("--lambd", type=float, default=0.01) #loss tradeoff
 
 # Training
