@@ -1,4 +1,4 @@
-from util.panns import CNN14
+from util.panns import Cnn14
 from args import args
 import torchaudio
 import torch
@@ -15,7 +15,7 @@ DEFAULT_SR = args.sr
 PANNS_SR = 32000
 default_samples = DEFAULT_SR * DEFAULT_DURATION
 
-pann = CNN14(32000, 1024, 320, 64, 50, 14000, 527)
+pann = Cnn14(32000, 1024, 320, 64, 50, 14000, 527)
 weights = torch.load(panns_ckpt, map_location='cpu')['model']
 state_dict = {k: v for k, v in weights.items() if k in pann.state_dict().keys()}
 pann.load_state_dict(state_dict, strict=False)
