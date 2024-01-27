@@ -373,11 +373,3 @@ model_dict = {
     'cnn10' : [cnn10, 512],
     'cnn14' : [cnn14, 2048],
 }
-
-if __name__ == "__main__":
-    from torchinfo import summary
-    print("loading cnn14")
-    model = CNN10(num_classes=4, do_dropout=False, embed_only=True, from_scratch=True, path_to_weights="/users/local/i21moumm/panns/Cnn14_mAP=0.431.pth", device="cpu")
-    print(summary(model))
-    print("panns loaded")
-    quit()
