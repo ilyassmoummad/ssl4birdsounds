@@ -84,7 +84,7 @@ if __name__ == "__main__":
     # Loss function and optimizer
     print(f"training {args.loss}")
     if args.loss == 'fro':
-        loss_fn = FrobeniusLoss(d=args.out_dim, lambd=args.lambd)
+        loss_fn = FrobeniusLoss(lambd=args.lambd)
     elif args.loss in ['simclr', 'supcon']:
         loss_fn = SupConLoss(temperature=args.tau, device=args.device)
     elif args.loss == 'bt':
