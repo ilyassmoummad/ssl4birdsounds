@@ -45,21 +45,22 @@ class SupConLoss(nn.Module): # inspired by : https://github.com/HobbitLong/SupCo
         return loss
     
 class FrobeniusLoss(nn.Module):
-    def __init__(self, d=1024, lambd=1.):
+    def __init__(self, lambd=1.):
         super().__init__()
-        self.d = d #dimension of feature space
         self.mse = torch.nn.MSELoss() 
         self.lambd = lambd
 
     def forward(self, z1, z2):
 
+        _, d = z1.shape
+        
         #centering
         z1 = z1 - z1.mean(0)
         z2 = z2 - z2.mean(0)
 
         #normalize dimensions to sqrt(D) std
-        z1 = (self.d**0.5) * (z1 / z1.norm())
-        z2 = (self.d**0.5) * (z2 / z2.norm())
+        z1 = (d**0.5) * (z1 / z1.norm())
+        z2 = (d**0.5) * (z2 / z2.norm())
 
         #invariance term (MSE)
         inv_loss = self.mse(z1, z2)
